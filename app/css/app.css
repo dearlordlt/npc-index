@@ -27,3 +27,8 @@ body {
 .nav:after {
   clear:both;
 }
+
+.content {
+  padding: 5px;
+  margin: 5px;
+}
