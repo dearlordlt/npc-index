@@ -1,9 +1,27 @@
-Clone the angular-ui-seed repository using [git][git]:
+Clone the npc-index repository using [git](https://git-scm.com/downloads):
 
 ```
 git clone https://github.com/dearlordlt/npc-index.git
 cd npc-ondex
 ```
+
+### Prepare environment
+
+* Install [git](https://git-scm.com/downloads)
+* Install [node](https://nodejs.org/en/)
+* Install bower globally ``npm install -g bower``
+* Install [mongodb](https://www.mongodb.org/downloads#production)
+* Add mongodb to PATH
+
+### Run BE and DB
+
+* ``C:\Program Files\MongoDB\Server\3.2\bin\mongod.exe --dbpath "data"`` from root folder
+* or ``mongod --dbpath "data"`` if you have mongo in PATH
+
+## Export/Import database
+
+* ``mongoexport --db npc-index --collection npc --out mongoscripts/npc.js``
+* ``mongoimport --db npc-index --collection npc --file mongoscripts/npc.js``
 
 ### Install Dependencies
 
@@ -12,7 +30,6 @@ npm install
 ```
 
 * `bower install` will be called automatically
-
 * `node_modules` - contains the npm packages for the tools we need
 * `app/bower_components` - contains the angular framework files
 
